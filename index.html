@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasonic Sensor Data</title>
+    <script>
+        async function fetchDistance() {
+            try {
+                const response = await fetch('/api/distance');
+                const data = await response.json();
+                document.getElementById('distance').textContent = data.distance;
+            } catch (error) {
+                console.error('Error fetching distance:', error);
+                document.getElementById('distance').textContent = 'Error fetching data';
+            }
+        }
+
+        // Fetch distance data every 2 seconds
+        setInterval(fetchDistance, 2000);
+        
+        // Fetch distance immediately when the page loads
+        window.onload = fetchDistance;
+    </script>
+</head>
+<body>
+    <h1>Ultrasonic Sensor Web Interface</h1>
+    <p>Current distance: <span id="distance">Loading...</span></p>
+    <p>Go to <a href="/api/distance">/api/distance</a> to see the raw sensor data.</p>
+</body>
+</html>
