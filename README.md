@@ -1,4 +1,5 @@
 # Ultrasonic-Web-Interface
+Uses static web to project the result.
 MBC Project 5A -> William Anthony 13223048
 
 
