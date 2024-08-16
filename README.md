@@ -6,11 +6,19 @@ MBC Project 5A -> William Anthony 13223048
 
 The `ultrasonic_sensor.ino` file contains the Arduino code that reads distance data from an ultrasonic sensor and sends it over the serial port.
 
-### 2. Node.js Server
+### 2. Frontend Code
 
-The `index.js` file is a Node.js server that reads the sensor data from the serial port and serves it to a web page.
+The `frontend` directory contains the HTML, JavaScript, and CSS files for the web interface.
 
-### 3. Getting Started
+### 3. Backend Code
+
+The `server` directory contains the Node.js server that reads data from the Arduino and provides it to the frontend via an API.
+
+### 4. Vercel Deployment
+
+- The frontend is configured to be deployed on Vercel, serving the HTML file from the `frontend` directory.
+
+### 5. Getting Started
 
 #### Arduino
 
