@@ -20,6 +20,8 @@ The `server` directory contains the Node.js server that reads data from the Ardu
 
 ### 5. Getting Started
 
+RUN "node server.js"
+
 #### Arduino
 
 1. Open `arduino/ultrasonic_sensor.ino` in the Arduino IDE.
